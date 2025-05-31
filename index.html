@@ -1,0 +1,1489 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrade Risk Navigator - Saudi Edition</title>
+    
+    <!-- Custom Favicon - Pharmaceutical Trade Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23059669;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23grad1)' stroke='white' stroke-width='3'/%3E%3Crect x='35' y='25' width='30' height='8' rx='4' fill='white'/%3E%3Crect x='35' y='40' width='30' height='8' rx='4' fill='white'/%3E%3Crect x='35' y='55' width='30' height='8' rx='4' fill='white'/%3E%3Ccircle cx='25' cy='29' r='6' fill='white'/%3E%3Ccircle cx='75' cy='44' r='6' fill='white'/%3E%3Ccircle cx='25' cy='59' r='6' fill='white'/%3E%3Cpath d='M70 60 L80 70 L85 65 L75 55 Z' fill='white'/%3E%3Ctext x='50' y='85' text-anchor='middle' fill='white' font-family='Arial' font-size='12' font-weight='bold'%3EKSA%3C/text%3E%3C/svg%3E">
+    
+    <!-- Apple Touch Icon for iOS devices -->
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAfPSURBVHgB7Z1NbxNHFMefmdeJnThxEifhJW0SaCpSKq1aqBBVVRUSpUrtvfQIh374AhyqcqWc+wW49sKlUqtKPVTqpRJVL1RFVS+IVmmlVlHVJm2SOM7L2uvZ3ZmdnZ2ZfbGTO5NnJBLv7s7Ozv/3n3nZGQchhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQ    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrade Risk Navigator - Saudi Edition</title>
+    
+    <!-- Custom Favicon - Pharmaceutical Trade Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23059669;stop-opacity:1' /><stop offset='100%25' style='stop-color:%232563eb;stop-opacity:1' /></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad1)' stroke='white' stroke-width='3'/><rect x='35' y='25' width='30' height='8' rx='4' fill='white'/><rect x='35' y='40' width='30' height='8' rx='4' fill='white'/><rect x='35' y='55' width='30' height='8' rx='4' fill='white'/><circle cx='25' cy='29' r='6' fill='white'/><circle cx='75' cy='44' r='6' fill='white'/><circle cx='25' cy='59' r='6' fill='white'/><path d='M70 60 L80 70 L85 65 L75 55 Z' fill='white'/><text x='50' y='85' text-anchor='middle' fill='white' font-family='Arial' font-size='12' font-weight='bold'>KSA</text></svg>">
+    
+    <!-- Fallback PNG favicon for older browsers -->
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJySURBVHgB7VdLSwJRFD7nPmYwH5imlYtCKNoFLVoEbVq0aBG0adGiRdCmRYsWQZsWLVoEbVq0aBG0adGiRdCmRYsWQZsWLVoEbVq0aBFBmxa9oEX/gPod7jxmRhvNXTjwcc6ce+537jn3XgIhhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIII<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrade Risk Navigator - Saudi Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: white;
+            min-height: 100vh;
+        }
+        
+        .header {
+            margin-bottom: 1.5rem;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .title {
+                font-size: 1.875rem;
+            }
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+        }
+        
+        .button-purple {
+            background-color: #7c3aed;
+            color: white;
+        }
+        
+        .button-purple:hover {
+            background-color: #6d28d9;
+        }
+        
+        .button-green {
+            background-color: #059669;
+            color: white;
+        }
+        
+        .button-green:hover {
+            background-color: #047857;
+        }
+        
+        .button-blue {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        .button-blue:hover {
+            background-color: #1d4ed8;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        
+        .select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background-color: white;
+        }
+        
+        .select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .card {
+                padding: 1.5rem;
+            }
+        }
+        
+        .card-blue {
+            background-color: #eff6ff;
+            border-color: #bfdbfe;
+        }
+        
+        .card-red {
+            background-color: #fef2f2;
+            border-color: #fecaca;
+        }
+        
+        .card-amber {
+            background-color: #fffbeb;
+            border-color: #fde68a;
+        }
+        
+        .card-green {
+            background-color: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+        
+        .card-purple {
+            background-color: #faf5ff;
+            border-color: #e9d5ff;
+        }
+        
+        .card-header {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .card-header {
+                font-size: 1.25rem;
+            }
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        @media (min-width: 768px) {
+            .badge {
+                font-size: 0.875rem;
+            }
+        }
+        
+        .badge-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .badge-green {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        
+        .badge-purple {
+            background-color: #e9d5ff;
+            color: #7c2d12;
+        }
+        
+        .badge-red {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .badge-yellow {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .grid-md-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid {
+                gap: 1.5rem;
+            }
+        }
+        
+        .risk-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .risk-item-high {
+            color: #dc2626;
+            background-color: #fef2f2;
+            border-color: #fecaca;
+        }
+        
+        .risk-item-medium {
+            color: #d97706;
+            background-color: #fffbeb;
+            border-color: #fde68a;
+        }
+        
+        .risk-item-low {
+            color: #059669;
+            background-color: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+        
+        .risk-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .risk-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .risk-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: between;
+            margin-bottom: 0.25rem;
+        }
+        
+        .risk-title {
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .risk-title {
+                font-size: 0.875rem;
+            }
+        }
+        
+        .toggle-button {
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            padding: 0.25rem;
+            margin-left: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        .toggle-button:hover {
+            color: #374151;
+        }
+        
+        .risk-example {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+        
+        @media (min-width: 768px) {
+            .icon {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+        
+        .list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .list-bullet {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #f59e0b;
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        .text-small {
+            font-size: 0.75rem;
+        }
+        
+        @media (min-width: 768px) {
+            .text-small {
+                font-size: 0.875rem;
+            }
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .empty-state {
+            padding: 2rem 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .empty-state {
+                padding: 3rem 1rem;
+            }
+        }
+        
+        .empty-icon {
+            width: 3rem;
+            height: 3rem;
+            color: #9ca3af;
+            margin: 0 auto 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .empty-icon {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .glossary-grid {
+            display: grid;
+            gap: 0.75rem;
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 768px) {
+            .glossary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .glossary-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .glossary-item {
+            background-color: white;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e9d5ff;
+        }
+        
+        .glossary-title {
+            font-weight: 600;
+            color: #581c87;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .glossary-text {
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+        
+        .tip-box {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: #e9d5ff;
+            border-radius: 0.5rem;
+        }
+        
+        .tip-text {
+            font-size: 0.75rem;
+            color: #6b21a8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <div class="header">
+            <div class="header-content">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <!-- Custom Logo -->
+                    <div style="width: 48px; height: 48px; flex-shrink: 0;">
+                        <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;">
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="45" fill="url(#logoGrad)" stroke="white" stroke-width="3"/>
+                            <!-- Document/List lines representing Incoterms -->
+                            <rect x="35" y="25" width="30" height="8" rx="4" fill="white"/>
+                            <rect x="35" y="40" width="30" height="8" rx="4" fill="white"/>
+                            <rect x="35" y="55" width="30" height="8" rx="4" fill="white"/>
+                            <!-- Pharmaceutical symbols (pills/capsules) -->
+                            <circle cx="25" cy="29" r="6" fill="white"/>
+                            <circle cx="75" cy="44" r="6" fill="white"/>
+                            <circle cx="25" cy="59" r="6" fill="white"/>
+                            <!-- Arrow indicating movement/trade -->
+                            <path d="M70 60 L80 70 L85 65 L75 55 Z" fill="white"/>
+                            <!-- KSA indicator -->
+                            <text x="50" y="85" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">KSA</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="title">🏥 MedTrade Risk Navigator - Saudi Edition</h1>
+                        <p class="subtitle">Complete Incoterms Risk Assessment for Medical & Pharmaceutical Imports to KSA</p>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="button button-purple" onclick="toggleGlossary()">
+                        📚 Key Terms
+                    </button>
+                    <button class="button button-green" onclick="shareLink()">
+                        📱 Share Tool
+                    </button>
+                    <button class="button button-blue" onclick="downloadPDF()">
+                        💾 Export
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Incoterm Selection -->
+        <div class="form-group">
+            <label class="label">Select Incoterm for Saudi Pharmaceutical Import Analysis</label>
+            <select class="select" id="incotermSelect" onchange="selectIncoterm()">
+                <option value="">Choose an Incoterm for pharmaceutical imports...</option>
+                <option value="EXW">EXW - Ex Works</option>
+                <option value="FCA">FCA - Free Carrier</option>
+                <option value="CPT">CPT - Carriage Paid To</option>
+                <option value="CIP">CIP - Carriage and Insurance Paid To</option>
+                <option value="DAP">DAP - Delivered at Place</option>
+                <option value="DPU">DPU - Delivered at Place Unloaded</option>
+                <option value="DDP">DDP - Delivered Duty Paid</option>
+                <option value="FAS">FAS - Free Alongside Ship</option>
+                <option value="FOB">FOB - Free on Board</option>
+                <option value="CFR">CFR - Cost and Freight</option>
+                <option value="CIF">CIF - Cost, Insurance and Freight</option>
+            </select>
+        </div>
+
+        <!-- Glossary Section -->
+        <div class="card card-purple hidden" id="glossarySection">
+            <h3 class="card-header">📚 Key Terms & Definitions</h3>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <h4 class="glossary-title">GDP - Good Distribution Practice</h4>
+                    <p class="glossary-text">Quality standards for distribution of pharmaceutical products to ensure integrity and quality throughout the supply chain.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">SFDA - Saudi Food and Drug Authority</h4>
+                    <p class="glossary-text">Saudi regulatory body responsible for approving and monitoring pharmaceuticals, medical devices, and related products.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">Cold Chain - Temperature-Controlled Supply Chain</h4>
+                    <p class="glossary-text">Unbroken series of refrigerated production, storage, and distribution activities maintaining specific temperature ranges (e.g., 2°C-8°C for vaccines).</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">Voyage - Ocean Transport Journey</h4>
+                    <p class="glossary-text">Complete sea journey from port of loading to port of discharge, typically 2-4 weeks for shipments from Europe to Saudi Arabia.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">ICC - Institute Cargo Clauses</h4>
+                    <p class="glossary-text">Standard marine insurance terms: ICC A (comprehensive), ICC B (named perils), ICC C (basic coverage - minimum for CIP/CIF).</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">Halal Certification - Islamic Compliance Certificate</h4>
+                    <p class="glossary-text">Required documentation proving pharmaceutical ingredients (especially gelatin capsules) comply with Islamic dietary laws.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">GMP - Good Manufacturing Practice</h4>
+                    <p class="glossary-text">Quality assurance standards ensuring pharmaceutical products are consistently produced and controlled according to quality standards.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">Insurance Liability Gap - Risk vs Cost Responsibility Mismatch</h4>
+                    <p class="glossary-text">Critical situation where seller pays transport costs but buyer bears loss risk (CPT/CFR) or where minimum insurance may be inadequate for pharmaceutical cargo value.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4 class="glossary-title">ICC A Coverage - Institute Cargo Clauses A - Comprehensive</h4>
+                    <p class="glossary-text">Highest level marine insurance covering all risks except specific exclusions. Required for CIP under Incoterms 2020, suitable for high-value pharmaceuticals.</p>
+                </div>
+            </div>
+            <div class="tip-box">
+                <p class="tip-text">💡 <strong>Tip:</strong> These terms appear throughout the risk assessments. Understanding them will help you better evaluate pharmaceutical import risks and communicate with suppliers and logistics providers.</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="mainContent" class="hidden">
+            <!-- Overview Section -->
+            <div class="card card-blue" id="overviewSection"></div>
+
+            <!-- Insurance Liability Section -->
+            <div class="card card-red" id="insuranceSection"></div>
+
+            <!-- Risk Analysis Grid -->
+            <div class="grid grid-md-2" id="riskGrid"></div>
+
+            <!-- Key Risk Factors -->
+            <div class="card card-amber" id="riskFactorsSection"></div>
+
+            <!-- Recommendations -->
+            <div class="card card-green" id="recommendationsSection"></div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="text-center empty-state" id="emptyState">
+            <div class="empty-icon">📦</div>
+            <h3 style="font-size: 1.125rem; font-weight: 500; color: #111827; margin-bottom: 0.5rem;">Select an Incoterm to Begin Risk Assessment</h3>
+            <p class="text-small" style="color: #6b7280; padding: 0 1rem;">Choose from the 11 ICC Incoterms 2020 rules for pharmaceutical imports to Saudi Arabia</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="card" style="margin-top: 2rem; padding: 1rem; background-color: #f9fafb;">
+            <p class="text-small" style="color: #6b7280;">
+                <strong>🇸🇦 Saudi Arabia Focus:</strong> This tool is optimized for pharmaceutical and medical device imports into Saudi Arabia with SFDA compliance considerations. Always consult with SFDA-registered agents, specialized pharmaceutical logistics providers, and consider cold chain requirements, halal certification, and Saudi customs regulations. Based on ICC Incoterms 2020 rules.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let selectedIncoterm = '';
+        let showGlossary = false;
+        let expandedRisk = null;
+
+        // Incoterms data
+        const incoterms = {
+            'EXW': {
+                name: 'Ex Works',
+                category: 'E - Departure',
+                description: 'Seller makes goods available at their premises',
+                riskTransfer: 'At seller\'s premises when goods made available',
+                insuranceGap: 'CRITICAL - Buyer must arrange complete coverage from pickup',
+                pharmaRisk: 'No insurance protection during initial cold chain transport from factory',
+                sellerRisks: [
+                    {
+                        type: 'Low',
+                        risk: 'Production and packaging risks only',
+                        severity: 'low',
+                        example: '🏭 EXAMPLE: European pharmaceutical manufacturer must ensure insulin products meet GMP standards and cold chain packaging requirements before pickup. Risk includes manufacturing defects or temperature-sensitive packaging failures that could affect SFDA approval.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Quality control and delivery timing to premises',
+                        severity: 'medium',
+                        example: '⏰ EXAMPLE: Medical device manufacturer in Germany delays MRI machine delivery by 2 weeks, affecting Saudi importer\'s pre-arranged shipping schedule and hospital installation timeline. Quality issues during buyer inspection can delay SFDA submissions.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Documentation for export (buyer handles)',
+                        severity: 'low',
+                        example: '📄 EXAMPLE: Seller provides commercial invoice, packing list, and basic product certificates. SFDA import permits, halal certificates, and detailed technical files are buyer\'s responsibility. Risk minimal but requires accurate pharmaceutical documentation.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'All transportation and logistics from seller premises',
+                        severity: 'high',
+                        example: '🚛 EXAMPLE: Saudi pharmaceutical importer purchasing diabetes medication from Swiss factory must arrange temperature-controlled transport, customs clearance in Switzerland, air freight to King Abdulaziz Port, and cold chain delivery to Riyadh. Complete responsibility from factory gate.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Export/import clearance and documentation',
+                        severity: 'high',
+                        example: '📋 EXAMPLE: Must obtain Swiss export permits, SFDA import licenses, halal certificates for gelatin capsules, and handle Saudi customs declarations. Complex process requiring specialized pharmaceutical logistics expertise and SFDA regulatory knowledge.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Insurance coverage for entire journey',
+                        severity: 'high',
+                        example: '🛡️ EXAMPLE: SAR 1.5M vaccine shipment needs specialized cold chain insurance covering 2°C-8°C throughout journey. Risk of temperature excursion during transport, power failures, or equipment malfunction requiring complete batch replacement.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'All costs and risks from pickup to destination',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: SAR 750K medical device order incurs: local trucking (SAR 2,000), export clearance (SAR 1,500), air freight (SAR 25,000), SFDA fees (SAR 5,000), customs duties (5%), cold chain insurance (0.5% of value). Buyer pays all beyond purchase price.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Buyer lacks local knowledge of export procedures',
+                    'Complex customs requirements in seller\'s country',
+                    'Limited control over initial shipping arrangements'
+                ]
+            },
+            'FCA': {
+                name: 'Free Carrier',
+                category: 'F - Main Carriage Unpaid',
+                description: 'Seller delivers to carrier nominated by buyer',
+                riskTransfer: 'When goods handed to buyer\'s nominated carrier',
+                insuranceGap: 'MEDIUM - Brief gap during handover to carrier',
+                pharmaRisk: 'Temperature breach risk during carrier handover',
+                sellerRisks: [
+                    {
+                        type: 'Medium',
+                        risk: 'Delivery to specified carrier location',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Vaccine manufacturer must deliver temperature-sensitive COVID vaccines to freight forwarder\'s cold storage facility 100km away. Risk of refrigeration failure, traffic delays affecting cold chain, or carrier facility temperature deviations.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export clearance and documentation',
+                        severity: 'medium',
+                        example: '📋 EXAMPLE: Antibiotic exporter must obtain controlled substance permits, provide stability data, and complete pharmaceutical export declarations. Delays in health authority approvals can halt shipment and affect product shelf life.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Loading onto carrier (if at seller premises)',
+                        severity: 'low',
+                        example: '📦 EXAMPLE: Insulin manufacturer responsible for proper loading into refrigerated container, ensuring temperature monitors are activated and cold chain documentation is complete. Risk of loading damage or temperature breach during transfer.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Main carriage and associated costs',
+                        severity: 'high',
+                        example: '✈️ EXAMPLE: Cardiac stent importer must arrange temperature-controlled air freight from Frankfurt to Riyadh (SAR 18,000), plus specialized pharmaceutical handling at both airports. Risk of flight delays affecting product stability or space unavailability during Hajj season.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Insurance from carrier pickup point',
+                        severity: 'high',
+                        example: '🛡️ EXAMPLE: Insurance coverage starts when specialized pharma carrier takes possession. Gap risk if temperature breach occurs during seller handover. Marine/air cargo insurance essential for SAR 2M chemotherapy drugs shipment.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import clearance and duties',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Medical device importer faces SFDA inspection, conformity assessment, 5% customs duty, and potential batch testing requirements. Delays can result in airport storage charges and product expiry concerns.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Carrier selection and reliability',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Choosing non-GDP certified freight forwarder leads to SFDA compliance issues, temperature breaches, or regulatory violations. Buyer must verify carrier\'s pharmaceutical handling credentials and Saudi authority approvals.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Carrier reliability and schedule adherence',
+                    'Clear definition of delivery point',
+                    'Coordination between seller and nominated carrier'
+                ]
+            },
+            'CPT': {
+                name: 'Carriage Paid To',
+                category: 'C - Main Carriage Paid',
+                description: 'Seller pays transport to named destination',
+                riskTransfer: 'When goods handed to first carrier (not at destination)',
+                insuranceGap: 'CRITICAL - Seller pays freight but buyer bears all transport risk',
+                pharmaRisk: 'Buyer liable for SAR millions in pharmaceutical cargo during entire air/sea transport',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Transportation costs to destination',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: German pharmaceutical company must pay SAR 35,000 for temperature-controlled air freight of oncology drugs to Riyadh. Risk of fuel surcharges, seasonal rate increases during Hajj, or specialized handling surcharges affecting profitability.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Carrier selection and performance',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Choosing low-cost carrier without proper pharmaceutical handling capabilities causes temperature breach in diabetes medication shipment. Seller\'s reputation at risk despite risk transferring at origin airport.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export clearance procedures',
+                        severity: 'medium',
+                        example: '📋 EXAMPLE: Controlled substance exporter needs DEA permits, health certificates, and batch release documentation. Regulatory errors can cause Saudi customs rejection and expensive return shipment costs.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Risk transfer at first carrier handover',
+                        severity: 'low',
+                        example: '📦 EXAMPLE: Risk passes to buyer when pharmaceutical products handed to air freight carrier, even though seller pays transport to Riyadh. Critical to document temperature conditions and chain of custody at handover.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Goods insurance during main carriage',
+                        severity: 'high',
+                        example: '🛡️ EXAMPLE: SAR 3M cancer drug shipment faces risk of temperature excursion during 15-hour flight or airport delays. Buyer must arrange pharmaceutical-specific insurance as seller only pays freight, doesn\'t bear risk of loss.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import duties and clearance',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Medical device importer faces 5% customs duty, SFDA conformity assessment fees (SAR 8,000), and potential batch testing costs. SFDA inspection delays can cause airport storage charges and cold chain concerns.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Final delivery from destination point',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Vaccines arrive at Jeddah airport but buyer must arrange GDP-compliant transport to hospital in Riyadh. Airport congestion during Hajj season can cause expensive cold storage charges and delivery delays.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Risk of damage during transport',
+                        severity: 'medium',
+                        example: '⚠️ EXAMPLE: Protein-based medication damaged due to temperature fluctuation during aircraft loading. Despite seller paying freight, buyer bears SAR 500K loss and must file insurance claim for replacement batch.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Insurance gap - seller pays transport but buyer bears risk',
+                    'Clear definition of destination point',
+                    'Import procedures at destination country'
+                ]
+            },
+            'CIP': {
+                name: 'Carriage and Insurance Paid To',
+                category: 'C - Main Carriage Paid',
+                description: 'Seller pays transport and minimum insurance',
+                riskTransfer: 'When goods handed to first carrier',
+                insuranceGap: 'Seller must provide ICC A coverage (110% value) - Enhanced in 2020',
+                pharmaRisk: 'Comprehensive coverage suitable for high-value medical cargo',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Transportation and insurance costs',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: Swiss pharmaceutical exporter pays SAR 28,000 air freight plus SAR 12,000 specialized pharmaceutical insurance to ship insulin to Riyadh. Risk of premium increases for temperature-sensitive or high-value oncology medications.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Minimum insurance coverage (110% ICC A)',
+                        severity: 'medium',
+                        example: '🛡️ EXAMPLE: Seller must provide Institute Cargo Clauses A coverage at 110% of invoice value. Enhanced coverage includes temperature deviation, regulatory rejection, and specialized pharmaceutical risks that SFDA-bound cargo requires.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export procedures and documentation',
+                        severity: 'medium',
+                        example: '📋 EXAMPLE: Medical device exporter requires FDA 510k clearance, ISO 13485 certificates, and detailed device master file for SFDA submission. Regulatory changes can delay shipment and increase compliance costs significantly.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'Low',
+                        risk: 'Additional insurance if needed',
+                        severity: 'low',
+                        example: '🛡️ EXAMPLE: SAR 5M chemotherapy drugs have comprehensive ICC A coverage provided by seller. Buyer may want additional coverage for specific risks like regulatory rejection or extended storage during SFDA clearance.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import clearance and duties',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Cardiac catheter importer faces SFDA device registration, ISO 13485 verification, 5% customs duty, and potential clinical evaluation requirements. Technical barriers may require local clinical trials or additional certifications.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Final delivery arrangements',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Temperature-controlled container arrives at King Abdulaziz Port but requires GDP-compliant transport to hospital pharmacy in Mecca. Buyer arranges specialized pharmaceutical logistics and temperature monitoring.'
+                    }
+                ],
+            },
+            'DAP': {
+                name: 'Delivered at Place',
+                category: 'D - Arrival',
+                description: 'Seller delivers ready for unloading at destination',
+                riskTransfer: 'At destination when goods ready for unloading',
+                insuranceGap: 'Seller bears all risks and must arrange coverage',
+                pharmaRisk: 'Seller liable for complete cold chain to Saudi destination',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'All transportation costs and risks to destination',
+                        severity: 'high',
+                        example: '🚛 EXAMPLE: European vaccine manufacturer must maintain 2°C-8°C cold chain from factory to Saudi hospital, bearing all costs including specialized air freight (SAR 45,000), customs clearance, and final GDP-compliant delivery to Riyadh.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Export clearance and procedures',
+                        severity: 'high',
+                        example: '📋 EXAMPLE: Controlled substance manufacturer needs narcotic export permits, batch certificates, and stability data. EU regulatory delays can halt shipment causing cold storage costs and affecting product shelf life in Saudi Arabia.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Insurance coverage for entire journey',
+                        severity: 'medium',
+                        example: '🛡️ EXAMPLE: Seller must insure SAR 4M cancer medication shipment from European factory to Saudi hospital. Risk includes temperature deviation, flight delays, customs holds, and potential batch contamination during multiple handling points.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Delivery timing and schedule adherence',
+                        severity: 'medium',
+                        example: '⏰ EXAMPLE: Emergency medical supplies must meet hospital\'s critical care schedule. Flight delays, SFDA inspection holds, or Hajj season logistics constraints can cause life-threatening delays and expensive emergency procurement.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'Medium',
+                        risk: 'Unloading at destination',
+                        severity: 'medium',
+                        example: '📦 EXAMPLE: MRI machine delivery requires specialized unloading equipment, certified technicians, and hospital infrastructure preparation. Inadequate facilities or untrained personnel can damage SAR 8M medical equipment.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Import duties and clearance',
+                        severity: 'high',
+                        example: '📄 EXAMPLE: Medical device importer must pay 5% customs duty, SFDA registration fees (SAR 15,000), obtain device establishment license, and ensure halal compliance for gelatin-containing products. Extended clearance for new devices.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Final receipt and inspection',
+                        severity: 'low',
+                        example: '📦 EXAMPLE: Hospital pharmacy must inspect delivered medications for temperature integrity, batch numbers, expiry dates, and SFDA label requirements. Prompt notification required for any pharmaceutical quality issues.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Seller\'s familiarity with destination country logistics and regulations',
+                    'Import restrictions, duties, and technical compliance requirements',
+                    'Clear definition of delivery point and unloading responsibilities'
+                ]
+            },
+            'DPU': {
+                name: 'Delivered at Place Unloaded',
+                category: 'D - Arrival',
+                description: 'Seller delivers and unloads at named destination',
+                riskTransfer: 'After unloading at destination',
+                insuranceGap: 'Seller covers all risks including unloading operations',
+                pharmaRisk: 'Maximum seller liability including medical equipment installation',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Complete delivery including unloading',
+                        severity: 'high',
+                        example: '📦 EXAMPLE: CT scanner manufacturer must deliver and install equipment at King Faisal Hospital using certified technicians, specialized lifting equipment, and clean room protocols. Seller bears SAR 25,000 installation costs and liability for equipment damage.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'All transport costs and risks',
+                        severity: 'high',
+                        example: '🚛 EXAMPLE: German pharmaceutical company bears complete costs from factory to Saudi hospital including air freight (SAR 35,000), customs clearance (SAR 8,000), SFDA fees, and temperature-controlled final delivery to Mecca.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Unloading equipment and labor costs',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: Dialysis machine delivery requires certified biomedical engineers (SAR 5,000), clean room setup, water quality testing, and SFDA commissioning approval. Seller bears full cost and regulatory compliance liability.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export procedures',
+                        severity: 'medium',
+                        example: '📋 EXAMPLE: Radiopharmaceutical exporter needs radioactive material permits, decay calculations, and specialized transport documentation. Regulatory compliance required throughout entire supply chain to Saudi nuclear medicine facility.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Import clearance and duties',
+                        severity: 'high',
+                        example: '📄 EXAMPLE: Surgical robot importer faces SFDA Class III device registration, clinical evaluation requirements, 5% customs duty, and medical device establishment licensing. Complex 6-month approval process with potential for extended delays.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Final inspection and acceptance',
+                        severity: 'low',
+                        example: '📦 EXAMPLE: Hospital must inspect installed medical equipment for compliance with Saudi electrical standards, SFDA device requirements, and halal material certification. Prompt acceptance testing required for warranty activation.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Availability and cost of appropriate unloading facilities and equipment',
+                    'Seller\'s capability and liability for safe unloading operations',
+                    'Import documentation complexity and duty calculation accuracy'
+                ]
+            },
+            'FAS': {
+                name: 'Free Alongside Ship',
+                category: 'F - Main Carriage Unpaid',
+                description: 'Seller delivers alongside ship at port',
+                riskTransfer: 'When goods placed alongside ship at port',
+                insuranceGap: 'HIGH - Buyer must arrange marine insurance from port',
+                pharmaRisk: 'Ocean transport unsuitable for most temperature-sensitive pharmaceuticals',
+                sellerRisks: [
+                    {
+                        type: 'Medium',
+                        risk: 'Delivery to ship\'s side at loading port',
+                        severity: 'medium',
+                        example: '🚢 EXAMPLE: European pharmaceutical company delivers temperature-sensitive vaccines to container ship at Hamburg port. Risk of cold chain breach during port handling, delays in ship loading, or inadequate reefer container temperature settings.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export clearance and documentation',
+                        severity: 'medium',
+                        example: '📋 EXAMPLE: Controlled substance exporter must complete pharmaceutical export declarations, provide batch certificates, and ensure proper dangerous goods documentation for ocean transport to Saudi Arabia.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Pre-shipment handling at port',
+                        severity: 'low',
+                        example: '📦 EXAMPLE: Insulin manufacturer ensures proper pharmaceutical storage conditions at port warehouse before ship loading. Risk of temperature deviation in port storage or contamination during handling.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Loading onto ship and all shipping costs',
+                        severity: 'high',
+                        example: '🚢 EXAMPLE: Medical device importer must arrange reefer container from Europe to Dammam Port (SAR 35,000), ensure temperature monitoring throughout 3-week voyage, and coordinate with shipping lines for pharmaceutical cargo requirements.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Marine insurance coverage',
+                        severity: 'high',
+                        example: '🛡️ EXAMPLE: SAR 6M vaccine shipment needs specialized marine pharmaceutical insurance covering temperature deviation, container breakdown, and potential Saudi customs rejection. Ocean transport presents significant cold chain risks.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import procedures and duties',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Pharmaceutical importer faces SFDA inspection at Dammam Port, potential batch sampling, 5% customs duty, and cold storage charges during extended clearance. Ocean shipments have longer clearance times.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Ship selection and scheduling',
+                        severity: 'medium',
+                        example: '⏰ EXAMPLE: Buyer must select shipping line with proper pharmaceutical handling capabilities and reefer container availability. Limited direct services to Saudi Arabia may require transshipment affecting cold chain integrity.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Port handling procedures and costs',
+                    'Ship loading coordination',
+                    'Marine insurance adequacy'
+                ]
+            },
+            'FOB': {
+                name: 'Free on Board',
+                category: 'F - Main Carriage Unpaid',
+                description: 'Seller loads goods onto ship at departure port',
+                riskTransfer: 'When goods loaded on board vessel',
+                insuranceGap: 'HIGH - Buyer must arrange marine insurance for entire voyage',
+                pharmaRisk: '2-3 week ocean voyage with cold chain risks',
+                sellerRisks: [
+                    {
+                        type: 'Medium',
+                        risk: 'Loading onto buyer\'s nominated ship',
+                        severity: 'medium',
+                        example: '🚢 EXAMPLE: Vaccine manufacturer must properly load temperature-sensitive products into buyer\'s nominated reefer container, ensure cold chain activation, and verify temperature monitoring systems before vessel departure from European port.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export clearance procedures',
+                        severity: 'medium',
+                        example: '📋 EXAMPLE: Pharmaceutical exporter must complete controlled substance export permits, provide stability data, and ensure proper dangerous goods classification for 21-day ocean voyage to Saudi Arabia.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Port handling and loading costs',
+                        severity: 'medium',
+                        example: '💰 EXAMPLE: Medical device seller pays specialized pharmaceutical handling charges, reefer container connection fees, and temperature monitoring setup costs (SAR 8,000) at origin port before risk transfer to buyer.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Ocean freight and shipping arrangements',
+                        severity: 'high',
+                        example: '🚢 EXAMPLE: Insulin importer must arrange temperature-controlled ocean freight from Hamburg to King Abdulaziz Port (SAR 28,000), monitor cold chain throughout 18-day voyage, and coordinate with Maersk for pharmaceutical shipping requirements.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Marine insurance from port of loading',
+                        severity: 'high',
+                        example: '🛡️ EXAMPLE: Insurance coverage starts when pharmaceutical products loaded onto vessel. SAR 4M cancer drug shipment needs comprehensive marine coverage including temperature deviation, general average, and Saudi regulatory rejection risks.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import clearance and duties',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Medical device importer faces SFDA inspection, conformity assessment, and potential extended clearance at Dammam Port. Ocean shipments require additional documentation and longer clearance times affecting cold chain products.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Ship nomination and scheduling',
+                        severity: 'medium',
+                        example: '⏰ EXAMPLE: Buyer must nominate shipping line with proper pharmaceutical credentials and available reefer capacity. Limited direct services may require transshipment in Dubai affecting temperature-sensitive product integrity.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Ship availability and scheduling',
+                    'Port congestion and delays',
+                    'Marine insurance coverage gaps'
+                ]
+            },
+            'CFR': {
+                name: 'Cost and Freight',
+                category: 'C - Main Carriage Paid',
+                description: 'Seller pays ocean freight to destination port',
+                riskTransfer: 'When goods loaded on board vessel (NOT at destination)',
+                insuranceGap: 'CRITICAL - NO insurance provided by seller despite paying freight',
+                pharmaRisk: 'Buyer bears full marine risks for SAR millions in pharmaceutical cargo',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Ocean freight costs to destination',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: European pharmaceutical manufacturer must pay SAR 45,000 for reefer container ocean freight of vaccines to Dammam Port. Risk of seasonal rate increases, Suez Canal surcharges, or specialized pharmaceutical handling fees affecting profitability.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Loading and export procedures',
+                        severity: 'medium',
+                        example: '🚢 EXAMPLE: Medical device exporter must ensure proper loading into temperature-controlled container, complete export documentation, and coordinate with shipping line for 3-week voyage to Saudi Arabia maintaining cold chain integrity.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Shipping schedule coordination',
+                        severity: 'medium',
+                        example: '⏰ EXAMPLE: Insulin manufacturer must coordinate with weekly shipping service to Saudi Arabia. Vessel delays or missed connections can affect product shelf life and require expensive express air freight alternatives.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Marine insurance (seller doesn\'t provide)',
+                        severity: 'high',
+                        example: '🛡️ EXAMPLE: SAR 8M chemotherapy drugs shipment has no insurance coverage from seller. Critical gap requiring buyer to arrange comprehensive marine pharmaceutical insurance including temperature deviation, general average, and regulatory rejection coverage.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Risk of loss/damage during ocean transport',
+                        severity: 'high',
+                        example: '⚠️ EXAMPLE: Vaccine shipment faces 21-day ocean voyage risks including container breakdown, temperature excursion, rough seas damage, or total loss. Buyer bears full SAR 6M replacement cost despite seller paying freight.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import clearance and duties',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Medical device importer must handle SFDA inspection at Dammam Port, pay 5% customs duty, and manage potential batch testing requirements. Extended ocean transit documentation can complicate SFDA clearance process.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Unloading and onward transport',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Pharmaceutical container arrives at port but buyer must arrange temperature-controlled unloading, port storage, and GDP-compliant transport to Riyadh hospital. Port congestion can cause expensive demurrage and cold chain concerns.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Marine insurance gap - critical risk exposure',
+                    'Ocean transport risks and delays',
+                    'Port discharge procedures'
+                ]
+            },
+            'CIF': {
+                name: 'Cost, Insurance and Freight',
+                category: 'C - Main Carriage Paid',
+                description: 'Seller pays freight and minimum marine insurance',
+                riskTransfer: 'When goods loaded on board vessel',
+                insuranceGap: 'Seller must provide ICC C coverage (110% value) - Basic coverage',
+                pharmaRisk: 'ICC C coverage may be inadequate for high-value pharmaceutical cargo',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Ocean freight and insurance costs',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: German pharmaceutical company pays SAR 42,000 ocean freight plus SAR 18,000 marine insurance for cancer drug shipment to Dammam. Risk of insurance premium increases for high-value pharmaceuticals and specialized reefer requirements.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Minimum marine insurance (110% ICC C)',
+                        severity: 'medium',
+                        example: '🛡️ EXAMPLE: Seller provides basic Institute Cargo Clauses C coverage at 110% invoice value. Limited coverage excludes temperature deviation, regulatory rejection, and specialized pharmaceutical risks requiring enhanced protection for Saudi imports.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Export and loading procedures',
+                        severity: 'medium',
+                        example: '🚢 EXAMPLE: Vaccine exporter must ensure proper reefer container loading, temperature activation, and pharmaceutical export documentation for 3-week voyage to Saudi Arabia. Cold chain responsibility until vessel departure.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'Medium',
+                        risk: 'Additional insurance if minimum insufficient',
+                        severity: 'medium',
+                        example: '🛡️ EXAMPLE: SAR 10M medical equipment shipment needs comprehensive coverage beyond basic ICC C. Buyer must purchase additional insurance for temperature deviation, strikes, theft, and SFDA regulatory rejection risks.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Import clearance and duties',
+                        severity: 'medium',
+                        example: '📄 EXAMPLE: Pharmaceutical importer faces SFDA batch testing, 5% customs duty, potential anti-dumping investigations, and extended clearance times for ocean shipments. Storage costs during SFDA inspection process.'
+                    },
+                    {
+                        type: 'Medium',
+                        risk: 'Port discharge and onward transport',
+                        severity: 'medium',
+                        example: '🚛 EXAMPLE: Temperature-controlled container arrives at King Abdulaziz Port requiring specialized pharmaceutical unloading, cold storage during clearance, and GDP-compliant transport to hospital in Medina.'
+                    },
+                    {
+                        type: 'Low',
+                        risk: 'Risk transfer vs cost responsibility confusion',
+                        severity: 'low',
+                        example: '⚠️ EXAMPLE: Buyer assumes risk transfers at Saudi port but actually occurs at European loading port. Understanding critical - seller pays costs but buyer bears risk throughout ocean voyage despite insurance.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Adequacy of minimum insurance coverage',
+                    'Understanding risk transfer occurs at loading port',
+                    'Import procedures at destination port'
+                ]
+            },
+            'DDP': {
+                name: 'Delivered Duty Paid',
+                category: 'D - Arrival',
+                description: 'Seller handles everything including import duties',
+                riskTransfer: 'After delivery ready for unloading at destination',
+                insuranceGap: 'Seller bears maximum obligation including import duties',
+                pharmaRisk: 'Seller handles all SFDA compliance and insurance risks',
+                sellerRisks: [
+                    {
+                        type: 'High',
+                        risk: 'Maximum obligation - all costs and risks',
+                        severity: 'high',
+                        example: '💰 EXAMPLE: European pharmaceutical company to Saudi hospital pays production, air freight (SAR 40,000), 5% Saudi customs duty, SFDA fees (SAR 20,000), and final delivery. Total additional costs can reach 40% of pharmaceutical product value.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Import duties and taxes',
+                        severity: 'high',
+                        example: '📄 EXAMPLE: Medical device exporter faces 5% customs duty, SFDA device registration fees (SAR 25,000), establishment license costs, and potential anti-dumping measures. Duty rates and SFDA fees can change, significantly affecting profitability.'
+                    },
+                    {
+                        type: 'High',
+                        risk: 'Import clearance procedures',
+                        severity: 'high',
+                        example: '📋 EXAMPLE: Pharmaceutical seller must navigate SFDA drug registration, batch testing requirements, halal certification for gelatin capsules, and customs valuation disputes. Requires specialized Saudi regulatory expertise and local representation.'
+                    }
+                ],
+                buyerRisks: [
+                    {
+                        type: 'Low',
+                        risk: 'Minimal - mainly receipt and inspection',
+                        severity: 'low',
+                        example: '📦 EXAMPLE: Hospital receives SFDA-approved medications with all clearances complete. Risk limited to final quality inspection, temperature verification, and acceptance of pharmaceutical documentation. Seller handles all regulatory compliance.'
+                    }
+                ],
+                keyRiskFactors: [
+                    'Seller\'s knowledge of Saudi pharmaceutical import regulations and SFDA processes',
+                    'VAT registration requirements and Saudi tax compliance for foreign companies',
+                    'Halal certification requirements and Islamic compliance for pharmaceutical ingredients'
+                ]
+            }
+        };
+
+        // Functions
+        function toggleGlossary() {
+            showGlossary = !showGlossary;
+            const glossarySection = document.getElementById('glossarySection');
+            if (showGlossary) {
+                glossarySection.classList.remove('hidden');
+            } else {
+                glossarySection.classList.add('hidden');
+            }
+        }
+
+        function shareLink() {
+            const url = window.location.href;
+            const text = `🏥 MedTrade Risk Navigator - Saudi Edition\n\nComplete Incoterms risk assessment for medical & pharmaceutical imports to KSA with SFDA compliance examples.\n\n${url}`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'MedTrade Risk Navigator - Saudi Edition',
+                    text: text,
+                    url: url
+                });
+            } else {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('Link copied to clipboard! Share with your team on WhatsApp.');
+                }).catch(() => {
+                    alert('Please copy this link manually: ' + url);
+                });
+            }
+        }
+
+        function downloadPDF() {
+            if (selectedIncoterm) {
+                alert(`PDF export feature coming soon! Currently analyzing ${selectedIncoterm} - ${incoterms[selectedIncoterm].name} for Saudi pharmaceutical imports`);
+            } else {
+                alert('Please select an Incoterm first to download the risk assessment.');
+            }
+        }
+
+        function selectIncoterm() {
+            const select = document.getElementById('incotermSelect');
+            selectedIncoterm = select.value;
+            
+            if (selectedIncoterm) {
+                showIncotermDetails();
+                document.getElementById('emptyState').classList.add('hidden');
+                document.getElementById('mainContent').classList.remove('hidden');
+            } else {
+                document.getElementById('emptyState').classList.remove('hidden');
+                document.getElementById('mainContent').classList.add('hidden');
+            }
+        }
+
+        function showIncotermDetails() {
+            const data = incoterms[selectedIncoterm];
+            if (!data) return;
+
+            // Overview Section
+            const overviewSection = document.getElementById('overviewSection');
+            overviewSection.innerHTML = `
+                <h2 style="font-size: 1.25rem; font-weight: bold; color: #111827; margin-bottom: 0.5rem;">
+                    ${selectedIncoterm} - ${data.name}
+                </h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+                    <span class="badge badge-blue">${data.category}</span>
+                    <span class="badge badge-green">🇸🇦 Saudi Import</span>
+                    <span class="badge badge-purple">💊 Pharma Focus</span>
+                </div>
+                <p style="color: #374151; font-size: 0.875rem;">${data.description}</p>
+            `;
+
+            // Insurance Liability Section
+            const insuranceSection = document.getElementById('insuranceSection');
+            insuranceSection.innerHTML = `
+                <h3 class="card-header" style="color: #dc2626;">
+                    🚨 Critical Insurance & Liability Analysis - ${selectedIncoterm}
+                </h3>
+                <div style="margin-bottom: 1rem; padding: 0.75rem; background-color: white; border-radius: 0.5rem; border: 1px solid #fecaca;">
+                    <h4 style="font-weight: 600; color: #7f1d1d; margin-bottom: 0.5rem;">📍 Risk Transfer Point & Insurance Responsibility</h4>
+                    <div style="margin-bottom: 0.5rem;">
+                        <p style="font-size: 0.875rem; color: #374151;"><strong>Risk Transfer:</strong> ${data.riskTransfer}</p>
+                        <p style="font-size: 0.875rem; color: #374151;"><strong>Insurance Gap:</strong> ${data.insuranceGap}</p>
+                        <p style="font-size: 0.875rem; color: #dc2626;"><strong>⚠️ Pharmaceutical Risk:</strong> ${data.pharmaRisk}</p>
+                    </div>
+                </div>
+                <div style="padding: 0.75rem; background-color: white; border-radius: 0.5rem; border: 1px solid #fecaca;">
+                    <h4 style="font-weight: 600; color: #7f1d1d; margin-bottom: 0.5rem;">📋 Insurance Action Items for Saudi Pharmaceutical Imports</h4>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div>
+                            <h5 style="font-size: 0.75rem; font-weight: 600; color: #1f2937; margin-bottom: 0.25rem;">FOR THIS INCOTERM:</h5>
+                            <ul style="font-size: 0.75rem; color: #374151; margin: 0; padding-left: 1rem;">
+                                ${getInsuranceRecommendations(selectedIncoterm)}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Risk Grid
+            const riskGrid = document.getElementById('riskGrid');
+            riskGrid.innerHTML = `
+                <div class="card">
+                    <h3 class="card-header">
+                        <span style="background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            🏭 Seller Risks & Responsibilities
+                        </span>
+                    </h3>
+                    <div id="sellerRisks"></div>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">
+                        <span style="background: linear-gradient(135deg, #059669, #10b981); color: white; padding: 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            🇸🇦 Buyer Risks (Saudi Importer)
+                        </span>
+                    </h3>
+                    <div id="buyerRisks"></div>
+                </div>
+            `;
+
+            // Populate risks
+            populateRisks('sellerRisks', data.sellerRisks, 'seller');
+            populateRisks('buyerRisks', data.buyerRisks, 'buyer');
+
+            // Risk Factors
+            const riskFactorsSection = document.getElementById('riskFactorsSection');
+            riskFactorsSection.innerHTML = `
+                <h3 class="card-header">⚠️ Critical Risk Factors to Monitor</h3>
+                <ul class="list">
+                    ${data.keyRiskFactors.map(factor => `
+                        <li class="list-item">
+                            <div class="list-bullet"></div>
+                            <span class="text-small">${factor}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+
+            // Recommendations
+            const recommendationsSection = document.getElementById('recommendationsSection');
+            recommendationsSection.innerHTML = `
+                <h3 class="card-header">🛡️ Saudi Pharmaceutical Import Recommendations</h3>
+                <div class="grid grid-md-2">
+                    <div>
+                        <h4 style="font-weight: 600; color: #111827; margin-bottom: 0.5rem;">🏥 For Saudi Importers:</h4>
+                        <ul style="font-size: 0.75rem; color: #374151; line-height: 1.4;">
+                            <li>• Ensure SFDA import license validity</li>
+                            <li>• Verify halal certification requirements</li>
+                            <li>• Maintain GDP-compliant cold chain</li>
+                            <li>• Use specialized pharma freight forwarders</li>
+                            <li>• Plan for SFDA clearance timeframes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-weight: 600; color: #111827; margin-bottom: 0.5rem;">🌍 For International Sellers:</h4>
+                        <ul style="font-size: 0.75rem; color: #374151; line-height: 1.4;">
+                            <li>• Understand SFDA registration requirements</li>
+                            <li>• Ensure pharmaceutical ingredient compliance</li>
+                            <li>• Provide comprehensive batch documentation</li>
+                            <li>• Consider Saudi regulatory representation</li>
+                            <li>• Factor Saudi customs duty (5%)</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+
+        function populateRisks(containerId, risks, type) {
+            const container = document.getElementById(containerId);
+            const isSeller = type === 'seller';
+            const iconColor = isSeller ? '#dc2626' : '#059669';
+            const bgColor = isSeller ? '#fef2f2' : '#f0fdf4';
+            const borderColor = isSeller ? '#fecaca' : '#bbf7d0';
+            const icon = isSeller ? '🏭' : '🇸🇦';
+            
+            container.innerHTML = risks.map((risk, index) => {
+                const riskId = `${type}-${index}`;
+                return `
+                    <div class="risk-item risk-item-${risk.severity}">
+                        <div class="risk-header">
+                            <div style="background: ${iconColor}; color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">
+                                ${icon}
+                            </div>
+                            <div class="risk-content">
+                                <div class="risk-toggle">
+                                    <span class="badge badge-${risk.severity === 'high' ? 'red' : risk.severity === 'medium' ? 'yellow' : 'green'}" style="font-size: 0.75rem;">
+                                        ${risk.type} Risk
+                                    </span>
+                                    <button class="toggle-button" onclick="toggleRisk('${riskId}')">
+                                        <span id="icon-${riskId}">▼</span>
+                                    </button>
+                                </div>
+                                <p class="risk-title">${risk.risk}</p>
+                                <div class="risk-example hidden" id="example-${riskId}">
+                                    ${risk.example}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleRisk(riskId) {
+            const example = document.getElementById(`example-${riskId}`);
+            const icon = document.getElementById(`icon-${riskId}`);
+            
+            if (example.classList.contains('hidden')) {
+                example.classList.remove('hidden');
+                icon.textContent = '▲';
+            } else {
+                example.classList.add('hidden');
+                icon.textContent = '▼';
+            }
+        }
+
+        function getInsuranceRecommendations(incoterm) {
+            const highRiskTerms = ['EXW', 'CPT', 'CFR', 'FAS', 'FOB'];
+            
+            if (highRiskTerms.includes(incoterm)) {
+                return `
+                    <li>• Arrange comprehensive pharmaceutical cargo insurance immediately</li>
+                    <li>• Include temperature deviation and cold chain failure coverage</li>
+                    <li>• Cover SFDA regulatory rejection and batch replacement costs</li>
+                    <li>• Consider SAR millions in potential pharmaceutical cargo value at risk</li>
+                `;
+            } else {
+                return `
+                    <li>• Verify seller's insurance coverage adequacy for pharmaceutical cargo</li>
+                    <li>• Check if coverage includes temperature-sensitive pharmaceutical risks</li>
+                    <li>• Consider additional coverage for high-value oncology/specialty drugs</li>
+                    <li>• Ensure SFDA compliance and regulatory rejection coverage</li>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
